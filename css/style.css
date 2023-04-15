@@ -9,6 +9,18 @@ body {
     height: 100%;
 }
 
+body {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+p {
+    margin: 0;
+}
+
 img {
     max-width: 100%;
 }
@@ -38,8 +50,8 @@ h6 {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
-    background-color: blue;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 .container {
@@ -53,6 +65,8 @@ h6 {
     justify-content: space-between;
     align-items: center;
     max-width: 1370px;
+    column-gap: 10px;
+    text-align: center;
 }
 
 .logo {
@@ -84,6 +98,10 @@ h6 {
 
 .header {
     border-bottom: 2px solid #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .location {
@@ -109,37 +127,140 @@ h6 {
     display: flex;
 }
 
-.hero {}
+.hero {
+    height: 100vh;
+    background: url(../img/background/headerbackground.png) no-repeat left top/cover;
+    padding-top: 272px;
+    color: #FFFFFF;
+    display: flex;
+    padding-bottom: 37px;
+}
 
-.main {}
+.hero_main {
+    flex: 1;
+}
 
-.hero {}
+.hero_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
-.hero_main {}
+.title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.37;
 
-.title {}
+}
 
-.subtitle {}
+.hero .title {
+    margin-bottom: 17px;
+}
 
-.hero_btns {}
+.subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: #FFFFFF;
+}
 
-.btn {}
+.hero_btns {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.btn {
+    background: none;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 170px;
+    display: inline-block;
+    padding: 12px 17px;
+}
+
+.btn_theme_white {
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
 
 .bonus {}
 
-.sale {}
-
-.advantages {}
-
-.advantage {}
-
-.advantage:last-child .advIconWrap .advIcon {
-    width: 20px;
-    height: 30px;
+.sale {
+    color: #ED7173;
 }
 
-.advIconWrap {}
+.advantages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantage {
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+
+.heroAdv {
+    flex: 0 1 276px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+}
+
+.advIconWrap {
+    margin-bottom: 14px;
+}
 
 .advIcon {}
 
 .advText {}
+
+@media (max-width: 960px) {
+    .container {
+        max-width: 898px;
+    }
+
+    .location {
+        display: none;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 722px;
+    }
+
+    .logo {
+        max-width: 142px;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .header_container .contact {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 300px;
+    }
+}
