@@ -96,6 +96,43 @@ h6 {
     margin: 0;
 }
 
+.burger {
+
+    width: 47px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.burger_el,
+.burger_el::before,
+.burger_el::after {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    height: 5px;
+    border-radius: 11px;
+}
+
+.burger_el::before,
+.burger_el::after {
+    content: "";
+    position: absolute
+}
+
+.burger_el::before {
+    top: 0;
+    left: 0;
+}
+
+.burger_el::after {
+    bottom: 0;
+    right: 0;
+    width: 83%;
+}
+
 .header {
     border-bottom: 2px solid #FFF;
     position: absolute;
@@ -193,8 +230,6 @@ h6 {
     border: 2px solid #FFFFFF;
 }
 
-.bonus {}
-
 .sale {
     color: #ED7173;
 }
@@ -224,9 +259,31 @@ h6 {
     margin-bottom: 14px;
 }
 
-.advIcon {}
+.advantageSection {
+    display: flex;
+    flex-direction: column;
+}
 
-.advText {}
+.advContainer {
+    padding: 40px 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.advList {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 42px;
+    align-items: center;
+}
+
+.advItem {
+    width: 345px;
+    height: 162px;
+}
 
 @media (max-width: 960px) {
     .container {
@@ -266,6 +323,10 @@ h6 {
 
     .logo {
         max-width: 142px;
+    }
+
+    .burger {
+        display: flex;
     }
 
     .navlist {
@@ -325,4 +386,53 @@ h6 {
         padding: 8px 12px;
     }
 
+    .btn:first-child {
+        margin-bottom: 14px;
+    }
+
+    .burger {
+        width: 29px;
+        height: 19px;
+    }
+
+    .burger_el,
+    .burger_el::before,
+    .burger_el::after {
+        height: 3px;
+    }
+
+    .advantages {
+        flex-wrap: wrap;
+    }
+
+    .heroAdv {
+        background-color: #FFFFFF;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        height: 56px;
+        margin-bottom: 10px;
+    }
+
+    .heroAdv .advText {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        margin-left: 11px;
+    }
+
+    .heroAdv .advIconWrap {
+        margin: 17px;
+    }
+
+    .heroAdv:last-child .advText {
+        margin-left: 14px;
+    }
+
+    .heroIcon {
+        fill: black;
+    }
 }
